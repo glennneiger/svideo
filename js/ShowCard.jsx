@@ -13,6 +13,7 @@ const Wrapper = styled((Link: any))`
   overflow: hidden;
   color: black;
   text-decoration: none;
+  min-height: 300px;
 `;
 
 const Image = styled.img`
@@ -31,9 +32,15 @@ class ShowCard extends Component {
       <Wrapper to={`/details/${this.props.imdbID}`}>
         <Image alt={`${this.props.title} Show Poster`} src={`/public/img/posters/${this.props.poster}`} />
         <div>
-          <h3>{this.props.title}</h3>
-          <h4>({this.props.year})</h4>
-          <p>{this.props.description}</p>
+          <h3>
+            {this.props.title}
+          </h3>
+          <h4>
+            ({this.props.year})
+          </h4>
+          <p>
+            {this.props.description}
+          </p>
         </div>
       </Wrapper>
     );
